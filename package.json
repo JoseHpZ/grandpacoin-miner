@@ -1,0 +1,23 @@
+{
+  "name": "grandpacoin-miner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/family-group/grandpacoin-miner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/family-group/grandpacoin-miner/issues"
+  },
+  "homepage": "https://github.com/family-group/grandpacoin-miner#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  }
+}

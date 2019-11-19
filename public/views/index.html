@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="assets/index.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>
+                <img src="../assets/images/GRANDPACOIN ICONO.svg"/>
+                <span>
+                    <span class="coin-name">GrandpaCoin </span>
+                    <span class="miner-title">Miner</span>
+                </span>
+            </h1>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <div class="main-content-container">
+                <div class="button-container">
+                    <button class="miner-button" id="start-miner">Start Miner</button>
+                    <button class="miner-button" id="stop-miner">Stop Miner</button>
+                    <button class="miner-button" id="clear-log">Clear log</button>
+                </div>
+                <section class="mining-log">
+                    <h5>Mining Log</h5>
+                    <div class="log-container">
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="assets/index.js"></script>
+    <script src="assets/socket.io.js"></script>
+    <script src="assets/clientSocket.js"></script>
+</body>
+</html>

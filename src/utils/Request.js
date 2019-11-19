@@ -12,7 +12,9 @@ class Request {
         return new Promise((resolve, reject) => {
             http[options.method](url, res => {
                 Request.formatDataChunk(res, resolve, reject);
-            }).on('error', reject);
+            }).on('error', err => {
+                reject(err)
+            });
         });
     }
     static sendResult(url, options = {}) {
@@ -33,20 +35,24 @@ class Request {
             });
 
             if (options.body) req.write(JSON.stringify(options.body));
-
-            req.on('error', reject);
+            req.on('error', err => {
+                err.code = req.code;
+                reject(err)
+            });
             req.end()
         });
     }
     static formatDataChunk(res, resolve, reject) {
         let data = '';
     
-        res.on('data', (d) => {
+        res.on('data', d => {
             data += d;
         });
         res.on('end', () => {
             const result = res.statusCode >= 200 && res.statusCode < 300 ? resolve : reject;
-            result(JSON.parse(data))
+            data = JSON.parse(data);
+            data.status = res.statusCode
+            result(data)
         })
     }
 }

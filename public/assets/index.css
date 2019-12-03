@@ -1,0 +1,112 @@
+@font-face {
+    src: url('./fonts/Montserrat-Bold.ttf');
+    font-family: MonBold;
+}
+@font-face {
+    src: url('./fonts/Montserrat-Light.ttf');
+    font-family: MonLight;
+}
+:root {
+    --blue: #224870;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 16px;
+    font-family: MonLight;
+}
+body {
+    background: #FAFAFA;
+    -webkit-overflow-scrolling: touch;
+}
+main {
+    width: 100%;
+    padding: 1.2em 0;
+}
+header {
+    width: 100%;
+    background: var(--blue);
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+}
+.header-container, .main-content-container, .main-content {
+    width: 90%;
+    margin: 0 auto;
+}
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header h1 > span {
+    padding-left: 10px;
+}
+h1 > img {
+    max-height: 40px;
+}
+.coin-name {
+    font-family: MonBold;
+    color: #FFF;
+}
+.miner-title {
+    color: #fbd206;
+}
+.coin-name {
+    font-size: 1.5em;
+}
+.miner-title {
+    font-size: 1.2em;
+}
+.miner-button {
+    padding: 0.8em 1.5em;
+    text-transform: uppercase;
+    border: none;
+    background: #FFF;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .1);
+    font-size: 0.6em;
+    letter-spacing: 0.5px;
+    color: var(--blue);
+    cursor: pointer;
+    border-radius: 3px;
+}
+.miner-button.active {
+    color: #FFF;
+    background: var(--blue);
+}
+.button-container .miner-button:first-child {
+    margin-right: 10px;
+}
+.main-content {
+    max-width: 1000px;
+    background: #FFF;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .1);
+    border-radius: 3px;
+}
+.main-content-container {
+    padding: 1.2em 0;
+}
+.mining-log h5 {
+    color: var(--blue);
+    font-size: 0.75em;
+    letter-spacing: 0.5px;
+    padding: 1em 0;
+}
+.log-container {
+    min-height: 300px;
+    max-height: 300px;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+    overflow: auto;
+}
+.log-container > p {
+    font-size: 0.9em;
+}
+.log-container > p:first-child {
+    padding: 0.3em 0.3em 0.3em 0.5em;
+}
+.log-container > p:not(:first-child) {
+    padding: 0 0.3em 0.3em 0.5em;
+}

@@ -2,9 +2,6 @@
 (d => {
     var socket = io('http://localhost:4000');
     
-    // socket.on('connect', () => {
-    //     console.log('connected');
-    // });
     socket.on('event', renderLogMessage);
     socket.on('disconnect', function(){});
 

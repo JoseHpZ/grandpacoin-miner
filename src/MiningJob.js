@@ -39,7 +39,6 @@ class MiningJob {
                     })
                     .then(res => {
                         MiningJob.emit(res.message);
-                        console.log(res.message);
                     })
                     .catch(err => {
                         if (err.errno && err.errno === 'ECONNREFUSED') {

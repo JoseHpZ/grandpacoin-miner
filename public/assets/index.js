@@ -7,7 +7,7 @@
                 d.getElementById('stop-miner').classList.remove('active');
             e.target.classList.add('active');
 
-            fetch('http://localhost:5556/job/start').then(res => res.json())
+            fetch('http://localhost:2000/job/start').then(res => res.json())
             .catch(err => {
                 removeActiveOnFail(e.target);
             });
@@ -21,7 +21,7 @@
             logContainer.insertAdjacentHTML('beforeend', `<p>Stopping Miner.</p>`);
             logContainer.children[logContainer.children.length - 1].scrollIntoView();
 
-            fetch('http://localhost:5556/job/stop').then(res => res.json())
+            fetch('http://localhost:2000/job/stop').then(res => res.json())
             .catch(err => {
                 removeActiveOnFail(e.target);
             });
